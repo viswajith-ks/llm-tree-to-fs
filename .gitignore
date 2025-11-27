@@ -1,0 +1,30 @@
+# --- Dependencies ---
+node_modules/
+package-lock.json   # Optional: Some teams commit this, some don't. For libraries, usually don't. For apps, do.
+yarn.lock
+
+# --- Build Outputs (Don't commit compiled code) ---
+dist/
+out/
+build/
+*.vsix
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- VS Code Local Settings ---
+.vscode/
+*.code-workspace
+
+# --- Environment Variables (Secrets) ---
+.env
+.env.local
