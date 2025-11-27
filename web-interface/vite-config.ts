@@ -2,7 +2,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: 'llm-tree-to-fs',
+  base: '/llm-tree-to-fs/',
 
   resolve: {
     alias: {
