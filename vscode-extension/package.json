@@ -1,0 +1,50 @@
+{
+  "name": "ai-tree-scaffolder",
+  "publisher": "psycozombie",
+  "displayName": "AI Tree Scaffolder",
+  "description": "Generate files from ASCII tree",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viswajith-ks/llm-tree-to-fs"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-tree-scaffolder.generate",
+        "title": "Generate Files from Tree"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ai-tree-scaffolder.generate",
+          "group": "modification",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/node": "16.x",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.0",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
